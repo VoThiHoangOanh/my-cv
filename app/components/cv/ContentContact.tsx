@@ -1,22 +1,11 @@
 'use client';
-import { CiClock2 } from 'react-icons/ci';
-import { SiGooglemeet } from 'react-icons/si';
-import { IoEarthSharp } from 'react-icons/io5';
 import React from 'react';
 import { IoIosMail } from 'react-icons/io';
 import { RiMapPinAddFill } from 'react-icons/ri';
 import { TbPhoneFilled } from 'react-icons/tb';
-import User from './img/Shape.png';
-import { Calendar } from "@/components/ui/calendar"
-import Image from "next/image";
-
 export const ContentContact = () => {
-  const [date, setDate] = React.useState<Date | undefined>(new Date());
-  const [showCalendar, setShowCalendar] = React.useState(false);
-
   return (
-    <div className="mx-auto h-screen">
-      {!showCalendar ? (
+    <div className="mx-auto">
         <div className="p-8 text-black">
           <div className="mx-auto">
             <h1 className="mb-6 text-4xl font-bold">Work with me</h1>
@@ -79,59 +68,8 @@ export const ContentContact = () => {
                 Submit
               </button>
             </form>
-            <p className="mb-4 mt-8 text-lg">
-              If you&#39;re interested in working with me, please schedule a meeting with me using the
-              calendar below.
-            </p>
-            <button
-              onClick={() => {
-                setShowCalendar(true);
-              }}
-              className="bg-gray-800 p-2 text-white hover:bg-gray-700"
-            >
-              Book a Call
-            </button>
           </div>
         </div>
-      ) : (
-        <div className="grid grid-cols-[1fr,1fr] gap-4 bg-neutral-800 p-4 text-white">
-          <div className="p-4 ">
-            <div className="mb-2">
-              <Image
-                  className="mr-3 h-10 w-10 rounded-full"
-                  src={User.src} alt="Avatar"
-                  width={50}
-                  height={50}
-                  priority
-              />
-              <div>
-                <h2 className="mt-2 text-sm font-semibold">Hoang Oanh</h2>
-                <h3 className="text-xl font-bold">15 Min Meeting</h3>
-              </div>
-            </div>
-            <div className="mb-2 flex items-center gap-2 text-white">
-              <CiClock2 />
-              <span>15m</span>
-            </div>
-            <div className="mb-2 flex items-center gap-2 text-white">
-              <SiGooglemeet />
-              <span>Google Meet</span>
-            </div>
-            <div className="flex items-center gap-2 text-white">
-              <IoEarthSharp />
-              <span>Asia/Bangkok</span>
-            </div>
-          </div>
-          <div className="flex items-center justify-between p-4">
-            <Calendar
-              mode="single"
-              selected={date}
-              onSelect={setDate}
-              className="rounded-md border text-white"
-            />
-          </div>
-        </div>
-      )}
     </div>
   );
 };
