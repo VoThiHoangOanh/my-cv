@@ -3,9 +3,9 @@ import * as React from 'react';
 export default function ContentHome() {
   return (
     <div>
-      <h2 className="mt-8 text-3xl font-bold">Hey, I'm Oanh </h2>
+      <h2 className="mt-8 text-3xl font-bold">Hey, I&#39;m Oanh </h2>
       <p className="mt-4 text-lg">
-        I'm a Full Stack Developer. I am 22 and learning TypeScript, Next.js, React.js, Node.js,...
+        I&#39;m a Full Stack Developer. I am 22 and learning TypeScript, Next.js, React.js, Node.js,...
         Now, I have a passion for learning UI/UX.
       </p>
       <p className="mt-4 text-lg">

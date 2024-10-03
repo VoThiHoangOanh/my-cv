@@ -8,6 +8,7 @@ import { RiMapPinAddFill } from 'react-icons/ri';
 import { TbPhoneFilled } from 'react-icons/tb';
 import User from './img/Shape.png';
 import { Calendar } from "@/components/ui/calendar"
+import Image from "next/image";
 
 export const ContentContact = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
@@ -20,7 +21,7 @@ export const ContentContact = () => {
           <div className="mx-auto">
             <h1 className="mb-6 text-4xl font-bold">Work with me</h1>
             <p className="mb-4 text-lg">
-              I'm currently available for freelance work. I'm also open to full-time opportunities.
+              I&#39;m currently available for freelance work. I&#39;m also open to full-time opportunities.
             </p>
             <div className="mb-6 text-lg">
               <p className="mb-2">You can reach out to me at:</p>
@@ -79,7 +80,7 @@ export const ContentContact = () => {
               </button>
             </form>
             <p className="mb-4 mt-8 text-lg">
-              If you're interested in working with me, please schedule a meeting with me using the
+              If you&#39;re interested in working with me, please schedule a meeting with me using the
               calendar below.
             </p>
             <button
@@ -96,7 +97,13 @@ export const ContentContact = () => {
         <div className="grid grid-cols-[1fr,1fr] gap-4 bg-neutral-800 p-4 text-white">
           <div className="p-4 ">
             <div className="mb-2">
-              <img src={User.src} alt="Profile" className="mr-3 h-10 w-10 rounded-full" />
+              <Image
+                  className="mr-3 h-10 w-10 rounded-full"
+                  src={User.src} alt="Avatar"
+                  width={50}
+                  height={50}
+                  priority
+              />
               <div>
                 <h2 className="mt-2 text-sm font-semibold">Hoang Oanh</h2>
                 <h3 className="text-xl font-bold">15 Min Meeting</h3>
